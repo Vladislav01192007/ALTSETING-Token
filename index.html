@@ -158,7 +158,17 @@
     <button onclick="setLang('en')">English</button>
     <button onclick="setLang('pl')">Polski</button>
   </div>
-
+  
+<section id="wallet" style="padding: 40px; text-align: center;">
+  <h2>🎒 ALTSETING Wallet</h2>
+  <button onclick="createWallet()" style="padding: 10px 20px; font-size: 16px;">Створити гаманець</button>
+  <div id="walletInfo" style="margin-top: 20px; display:none;">
+    <p><strong>Ваша адреса:</strong></p>
+    <p id="walletAddress" style="word-break: break-all;"></p>
+    <button onclick="copyAddress()" style="padding: 8px 16px;">📋 Скопіювати адресу</button>
+  </div>
+</section>
+  
   <section>
     <h2 id="about-title">Про ALTSETING</h2>
     <p id="about-text">ALTSETING Token — це не просто ще один мем-токен. Це революційний проєкт, який поєднує гейміфікацію, NFT, Telegram-бота та криптовалюту в єдину екосистему. З нашою командою ви отримаєте новий досвід у світі Web3.</p>
