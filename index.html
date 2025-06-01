@@ -264,13 +264,71 @@ function openWhitelist() {
         }
         h1 { color: #00ffc6; font-size: 2.5rem; }
         p { max-width: 800px; margin: 20px auto; font-size: 1.2rem; line-height: 1.6; }
+        pre {
+          background: #111;
+          color: #00ffc6;
+          text-align: left;
+          padding: 20px;
+          border-radius: 10px;
+          overflow-x: auto;
+          font-size: 0.9rem;
+          max-width: 90%;
+          margin: 20px auto;
+        }
       </style>
     </head>
     <body>
       <h1>📝 ALTSETING Whitelist</h1>
       <p>ALTSETING Token — це криптопроєкт нового покоління. Наша мета — поєднати гейміфікацію, Web3, NFT, Telegram-бота та власну криптовалюту в одну екосистему.</p>
       <p>Whitelist — це список користувачів, які першими отримають доступ до закритих можливостей: сейл, NFT, DAO.</p>
-      <p>ALTSETING — це не просто токен. Це РУХ.</p>
+      <p>Нижче — технічна інформація для інтеграції з токен-листами та сервісами DeFi:</p>
+      <pre>{
+  "name": "ALTSETING Token List",
+  "logoURI": "logo.jpg",
+  "tags": {
+    "meme-token": {
+      "name": "meme-token",
+      "description": "Tokens created for community & fun"
+    },
+    "community-token": {
+      "name": "community-token",
+      "description": "Tokens that represent community-driven projects"
+    }
+  },
+  "timestamp": "2025-05-21T00:00:00+00:00",
+  "tokens": [
+    {
+      "chainId": 101,
+      "address": "8d4UWpvqkJTkGq19KhKwZxSujqENVRfg4UJze5mCHq8Y",
+      "symbol": "ALTST",
+      "name": "ALTSETING Token",
+      "decimals": 9,
+      "logoURI": "logo.jpg",
+      "tags": [
+        "meme-token",
+        "community-token"
+      ],
+      "extensions": {
+        "website": "https://altseting-token.vercel.app/",
+        "twitter": "https://x.com/altsetingtoken?s=21",
+        "telegram": "https://t.me/ALTsetingtoken",
+        "discord": "https://discord.gg/Q7WDbfaj",
+        "description": "ALTSETING Token ($ALTST) is the memecoin of the ALTseason. Built on Solana, powered by SETI, META and the community miner WebApp."
+      }
+    }
+  ]
+}</pre>
+      <p>🔍 <b>Простими словами:</b></p>
+      <p>
+        Це структура токена ALTSETING ($ALTST), яку можуть використовувати біржі, гаманці та децентралізовані сервіси.
+        Тут вказані: <br>
+        🔹 Назва і лого<br>
+        🔹 Мережа (Solana)<br>
+        🔹 Адреса контракту<br>
+        🔹 Теги (meme-token, community-token)<br>
+        🔹 Посилання на сайт, Twitter, Telegram і Discord<br>
+        🔹 Опис проєкту, щоб усі знали, що ALTSETING — це не просто токен, а справжній Web3-рух 🚀
+      </p>
     </body>
     </html>
   `);
