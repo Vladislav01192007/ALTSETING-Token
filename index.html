@@ -379,6 +379,7 @@ function openWhitelist() {
   `);
 }
 </script>
+  <a href="https://metamask.app.link/dapp/yourdomain.com" target="_blank">
   <button id="addALTST" style="padding: 10px 20px; background-color: #ffce00; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">
   🦊 Add ALTSETING Token (ALTST) to Metamask
 </button>
@@ -390,7 +391,7 @@ document.getElementById('addALTST').addEventListener('click', async () => {
       method: 'wallet_watchAsset',
       params: {
         type: 'ERC20',
-        options: {
+        options: {    
           address: '0x01f287740b49430A2eF92fad2058e31a38C1704C', // заміни на свій
           symbol: 'ALTST',
           decimals: 18,
