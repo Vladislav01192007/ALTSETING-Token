@@ -379,37 +379,56 @@ function openWhitelist() {
   `);
 }
 </script>
-  <button id="addALTST" style="padding: 10px 20px; background-color: #ffce00; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">
-  🦊 Add ALTSETING Token (ALTST) to Metamask
+
+<!-- Button to open site in MetaMask browser -->
+<a href="https://metamask.app.link/dapp/YOUR_DOMAIN_HERE" target="_blank">
+  <button style="padding: 12px 18px; background-color: #ffce00; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; font-size: 16px;">
+    🦊 Open in MetaMask to add ALTST
+  </button>
+</a>
+
+<!-- Warning text -->
+<p style="font-size: 14px; color: red; margin-top: 10px;">
+  ⚠️ To add ALTSETING Token (ALTST), please open this site in the <strong>MetaMask Browser</strong> on your phone. Tap the button above.
+</p>
+
+<!-- Button to add token (works only inside MetaMask browser) -->
+<button id="addALTST" style="margin-top: 20px; padding: 10px 20px; background-color: #ffce00; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">
+  ➕ Add ALTST to wallet
 </button>
 
 <script>
 document.getElementById('addALTST').addEventListener('click', async () => {
+  if (!window.ethereum) {
+    alert("⚠️ Please open this site in the MetaMask browser to add the token.");
+    return;
+  }
+
   try {
     const wasAdded = await window.ethereum.request({
       method: 'wallet_watchAsset',
       params: {
         type: 'ERC20',
-        options: {    
-          address: '0x01f287740b49430A2eF92fad2058e31a38C1704C', // заміни на свій
+        options: {
+          address: '0x01f287740b49430A2eF92fad2058e31a38C1704C',
           symbol: 'ALTST',
           decimals: 18,
-          image: 'https://raw.githubusercontent.com/Vladislav01192007/ALTSETING-Token-logo/8efaf278d78ff006832663333c90490c51c3d4c6/logo.jpg', // заміни на посилання до логотипу
+          image: 'https://raw.githubusercontent.com/Vladislav01192007/ALTSETING-Token-logo/8efaf278d78ff006832663333c90490c51c3d4c6/logo.jpg',
         },
       },
     });
 
     if (wasAdded) {
-      alert('ALTST успішно додано в гаманець!');
+      alert('✅ ALTST successfully added!');
     } else {
-      alert('Користувач відхилив додавання токена.');
+      alert('❌ Token addition was rejected by the user.');
     }
   } catch (error) {
-    console.log(error);
-    alert('Помилка під час додавання токена.');
+    console.error(error);
+    alert('⚠️ Error adding the token.');
   }
 });
-</script> 
+</script>
   
   <script>
     const translations = {
